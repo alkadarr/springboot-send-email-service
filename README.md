@@ -1,51 +1,37 @@
-# Intro
-Spring is a Java framework that makes it easier for programmers to create Java applications by 
-implementing one of the design-patterns: dependency-injection.
-Spring boot is the one of Spring frameworks.
+# Spring Boot Send Email Services
 
-As a developer, I always need a simple basic code initialization for my project. to make it easier,
-I made this simple-basic-code project. hope it is useful for those of you.
+The Spring Boot Send Email Services project is a Java-based application that provides email sending functionality using Spring Boot. This project allows you to easily integrate email sending capabilities into your applications.
 
-# Installation Instructions
-First of all, you can clone the project to your and run it by your favorite IDE (I use Intellij IDEA).
-Note that you have to make some adjustments.
+## Table of Contents
 
-note : in this project, I use SQL SERVER as the database, Spring boot 3.1.1, and java 17.
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-# Adjustments
-If you just need to test/run the whole project, please execute initiate_query.sql (in Query foler) first with your sql server.
-Then you have to adjust application.properties.
+## Features
 
-https://github.com/alkadarr/springboot-simple-basic-code/blob/2cb6e93e4e91c614681fc827bc8abddc2e0916c7/src/main/resources/application.properties#L4-L8
+- Send plain text and HTML emails.
 
-replace it to your datasource information.
+[comment]: <> (- Support for attachments.)
+- Customizable email templates.
+- SMTP server configuration.
+- Easy integration with Spring Boot applications.
 
-otherwise, you can replace server port and servlet context path.
+## Prerequisites
 
-https://github.com/alkadarr/springboot-simple-basic-code/blob/0e538abd3125dc7d2a731bc7674fea70d340f76e/src/main/resources/application.properties#L1-L2
+Before you begin, ensure you have met the following requirements:
 
-then you can build and run the project.
+- Java 8 or higher installed.
+- Maven build tool installed.
+- An SMTP server for sending emails (e.g., Gmail SMTP, SendGrid).
 
-# Test the application
-After you run the project, you are able to test with the next curl
+## Installation
 
-   ` curl --location 'http://localhost:8080/app-name/product/all' `
+1. Clone the repository:
 
-You'll get a response as in below.
-  
-    `{
-    "success": true,
-    "message": "",
-    "data": [
-        {
-            "productName": "Aqua",
-            "createdDate": "2023-07-11T13:32:16.977",
-            "createdBy": "SYSTEM",
-            "updatedDate": null,
-            "updatedBy": null
-        },
-        .
-        .
-        .
-    ]
-}`
+   ```bash
+   git clone https://github.com/yourusername/springboot-send-email-services.git
